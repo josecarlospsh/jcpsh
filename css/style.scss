@@ -1,9 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&family=Cabin:ital,wght@0,400;0,600;0,700;1,500&family=Inter:wght@300;400;600&display=swap");
-
 $color-gray: #222;
 $color-darkgray: #555;
 $color-ligthgray: #dddddd;
 $color-mediumgray: #888;
+$color-ligthgray-2: #cfcfcf;
 $color-black: #111;
 $color-white: #fff;
 $color-qbic: #f83821;
@@ -45,6 +44,51 @@ body {
   @media screen and (min-width: 768px) {
     font-size: 1.4rem;
     line-height: 1.8rem;
+  }
+  @media (prefers-color-scheme: dark) {
+    &.dark {
+      background-color: $color-gray;
+      background-image: radial-gradient(
+          $color-darkgray 0.75px,
+          $color-gray 0.75px
+        ),
+        radial-gradient($color-darkgray 0.75px, $color-ligthgray 0.75px);
+      color: $color-white;
+      a {
+        color: $color-ligthgray;
+      }
+      .welcome {
+        .avatar {
+          img {
+            border-color: $color-gray;
+            background: linear-gradient(
+              270deg,
+              $color-ligthgray,
+              $color-mediumgray
+            );
+          }
+        }
+        .name {
+          color: $color-ligthgray;
+        }
+      }
+      .switch-theme {
+        background-color: $color-gray;
+        color: $color-white;
+        svg {
+          // transition: stroke 400ms;
+          stroke: $color-white;
+        }
+        .moon-icon {
+          stroke-dasharray: 1px 1px;
+          opacity: 1;
+        }
+        .sun-icon {
+          stroke-dasharray: 0px 1px;
+          opacity: 0;
+        }
+      }
+    }
   }
   &.dark {
     background-color: $color-gray;
@@ -88,6 +132,12 @@ body {
         opacity: 0;
       }
     }
+    .time{
+      color: $color-ligthgray-2;
+    }
+    .date{
+      color: $color-darkgray;
+    }
   }
 }
 a {
@@ -121,7 +171,7 @@ a {
       border-radius: 50%;
       border: 1px solid $color-ligthgray;
       padding: 0.2rem;
-      background: linear-gradient(270deg, $color-black, $color-white);
+      background: linear-gradient(270deg, $color-ligthgray, $color-white);
     }
   }
   .name {
@@ -221,5 +271,33 @@ a {
     stroke-dasharray: 1px 1px;
     opacity: 1;
     transition: stroke-dasharray 0.5s ease-in, opacity 300ms ease-in;
+  }
+}
+.time{
+  position: absolute;
+  top: 1.5rem;
+  left: 1rem;
+  font-family: $font-family-3;
+  color: $color-gray;
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+  z-index: 9;
+  @media screen and (min-width: 768px) {
+    top: 1.25rem;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+  }
+}
+
+.date{
+  font-family: $font-family-3;
+  color: $color-ligthgray-2;
+  font-size: 0.5rem;
+  line-height: 1rem;
+  position: absolute;
+  bottom: 10px;
+  @media screen and (min-width: 768px) {
+    font-size: 0.65rem;
+    line-height: 1.25rem;
   }
 }
