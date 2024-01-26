@@ -34,7 +34,7 @@
     <link rel="icon" type="image/png" href="favicon.png" />
     <link rel="apple-touch-icon" href="favicon.png" />
     <link rel="canonical" href="https://jcpsh.xyz" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&family=Cabin:ital,wght@0,400;0,600;0,700;1,500&family=Inter:wght@300;400;600&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" />
     <link rel="dns-prefetch" href="https://fonts.googleapis.com/" />
     <link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin/>
     <link rel="dns-prefetch" href="https://www.googletagmanager.com/"/>
@@ -53,9 +53,10 @@
       gtag("config", "G-S3NSW6Q4QX");
     </script>
   </head>
-  <body>
-    <div class="time"></div>
-    <div class="switch-theme">
+  <body class="relative bg-gray text-black">
+    <div class="absolute top-0 z-[-2] h-screen w-screen bg-gray bg-[radial-gradient(#555_1px,#222_1px)] bg-[size:30px_30px]"></div>
+    <div class="time text-lightgray absolute top-5 left-4 z-10 text-xs"></div>
+    <div class="switch-theme hidden">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
@@ -140,51 +141,59 @@
         ></line>
       </svg>
     </div>
-    <section class="container">
-      <div class="welcome">
-        <div class="avatar">
-          <img src="img/jcpsh-avatar.jpg" alt="Jose Carlos Pajuelo Sh." />
+    <section class="relative max-w-[750px] mx-auto h-screen flex flex-col justify-center items-center">
+      <div class="py-6 px-2 md:p-4">
+        <div class="flex flex-col md:flex-row justify-center md:justify-start items-center gap-6">
+          <div class="flex justify-start">
+            <img class="w-28 h-28 rounded-full border-2 border-lightgray2 p-1 bg-[linear-gradient(270deg_#ddd_#fff)]" src="src/img/jcpsh-avatar.jpg" alt="Jose Carlos Pajuelo Sh." />
+          </div>
+          <div class="flex flex-col items-center md:items-start">
+            <h1 class="inline-flex animate-text-gradient bg-gradient-to-r from-[#cfcfcf] via-[#ddd] to-[#fff] bg-[200%_auto] bg-clip-text text-transparent text-2xl md:text-3xl font-normal mb-1"><span class="font-bold">Jose Carlos Pajuelo Sh.</span></h1>
+            <p class="text-mediumgray text-lg leading-7 md:text-xl md:leading-8 text-center md:text-left">
+              Web developer, Gamer, Music Lover, Dreamer
+              <a
+              rel="noopener noreferrer"
+              href="https://qbic.cc"
+              target="_blank"
+              class="text-lightgray decoration-none border-b border-dotted border-inherit"
+              >@qbicpe</a
+              >
+            </p>
+          </div>
         </div>
-        <h1 class="name"><span>Jose Carlos Pajuelo Sh.</span></h1>
-        <p class="dev">
-          Web developer, Gamer, Music Lover, Dreamer
-          <a
-            rel="noopener noreferrer"
-            href="https://qbic.cc"
-            target="_blank"
-            class="qbic"
-            >@qbicpe</a
-          >
-        </p>
-        <div class="social">
+        <div class="mt-6 text-center">
           <a
             rel="noopener noreferrer"
             href="https://linkedin.com/in/josecarlospsh/"
             target="_blank"
+            class="text-lightgray m-2 text-base decoration-none border-b border-dotted border-inherit"
             >Linkedin</a
           >
           <a
             rel="noopener noreferrer"
             href="https://github.com/josecarlospsh"
             target="_blank"
+            class="text-lightgray m-2 text-base decoration-none border-b border-dotted border-inherit"
             >Github</a
           >
           <a
             rel="noopener noreferrer"
-            href="https://twitter.com/josecarlospsh"
+            href="https://x.com/josecarlospsh"
             target="_blank"
-            >Twitter</a
+            class="text-lightgray m-2 text-base decoration-none border-b border-dotted border-inherit"
+            >X</a
           >
           <a
             rel="noopener noreferrer"
-            href="mailto:josecarlospsh@gmail.com"
+            href="mailto:jcpsh@duck.com"
             target="_blank"
+            class="text-lightgray m-2 text-base decoration-none border-b border-dotted border-inherit"
             >Email</a
           >
         </div>
       </div>
-      <div class="date"></div>
+      <div class="date absolute bottom-2 text-mediumgray text-xxxs leading-4 md:text-xxs md:leading-5"></div>
     </section>
-    <script type="module" src="/main.js"></script>
+    <script type="module" src="src/main.js"></script>
   </body>
 </html>

@@ -1,4 +1,4 @@
-import "./css/style.scss";
+import "./style.css";
 
 // change appearance theme
 const toggleSwitch = document.querySelector(".switch-theme");

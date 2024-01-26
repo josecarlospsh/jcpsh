@@ -21,15 +21,10 @@ $font-family-3: "Inter", sans-serif;
   background-image: linear-gradient(90deg, $color-1, $color-2);
 }
 //General
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 html {
   font-size: 100%;
 }
-body {
+body2 {
   position: relative;
   background-color: $color-white;
   background-image: radial-gradient($color-ligthgray 0.75px, transparent 0.75px),
@@ -242,7 +237,7 @@ a {
   top: 1rem;
   right: 1rem;
   background-color: $color-white;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   color: $color-gray;
@@ -271,33 +266,5 @@ a {
     stroke-dasharray: 1px 1px;
     opacity: 1;
     transition: stroke-dasharray 0.5s ease-in, opacity 300ms ease-in;
-  }
-}
-.time{
-  position: absolute;
-  top: 1.5rem;
-  left: 1rem;
-  font-family: $font-family-3;
-  color: $color-gray;
-  font-size: 0.75rem;
-  line-height: 0.75rem;
-  z-index: 9;
-  @media screen and (min-width: 768px) {
-    top: 1.25rem;
-    font-size: 0.75rem;
-    line-height: 1.25rem;
-  }
-}
-
-.date{
-  font-family: $font-family-3;
-  color: $color-ligthgray-2;
-  font-size: 0.5rem;
-  line-height: 1rem;
-  position: absolute;
-  bottom: 10px;
-  @media screen and (min-width: 768px) {
-    font-size: 0.65rem;
-    line-height: 1.25rem;
   }
 }
